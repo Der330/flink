@@ -75,7 +75,10 @@ public class SimpleStringSchema
 
     @Override
     public String deserialize(byte[] message) {
-        return new String(message, charset);
+        if( message!= null){
+            return new String(message, charset);
+        }
+        return null;
     }
 
     @Override
